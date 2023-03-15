@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+.btn-outline-pink:hover {
+    color: #fff !important;
+    background-color: #ff4081 !important;
+    border-color: #ff4081 !important;
+}
+
+.btn-pink:hover {
+    color: #fff !important;
+    background-color: #c72058 !important;
+    border-color: #c72058 !important;
+}
+
+.btn-outline-pink {
+    color: #ff4081 !important;
+    background-color: #fff !important;
+    border-color: #ff4081 !important;
+}
+
+.btn-pink {
+    color: #fff !important;
+    background-color: #ff4081 !important;
+    border-color: #ff4081 !important;
+}
+
+.fs-0_5 {
+    font-size: 5.5rem !important;
+}
+
+.fs-6_5 {
+    font-size: 0.9rem !important;
+}
+
+.text-pink {
+    color: #ff4081;
+}
+
+.bg-kiosk {
+    background-color: #377dff;
+}
+
+a {
+    text-decoration: none;
+    color: #444444;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ff4081;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
