@@ -2,6 +2,9 @@ import Layout from "../Layout/Layout";
 import '../components/css/common.css';
 import {useLocation, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
+import ModalPortal from "../Layout/Modal/ModalPortal";
+import CreditLogModal from "../Agree/Modal/CreditLogModal";
+import SendTypeModal from "./Modal/SendTypeModal";
 
 
 function ChooseSendType(){
@@ -10,6 +13,11 @@ function ChooseSendType(){
 
     const [selectedCompany, setSelectedCompany]:any = useState();
     const [insurerInfo, setInsurerInfo]:any = useState();
+    const [sendTypeModalOpen, setSendTypeModalOpen] = useState<boolean>();
+
+    const HandleSendTypeModalShow = () => {
+        setSendTypeModalOpen(false);
+    };
 
     const nextPage = () => {
         navigate("/complete",{
@@ -40,12 +48,13 @@ function ChooseSendType(){
                     </div>
                     <div className="mb-3">
                         <input type="radio" className="btn-check me-4" name="options-outlined" id="btn_phone"
-                               autoComplete="off"/>
+                               autoComplete="off" onClick={() => setSendTypeModalOpen(true)}/>
                             <label
                                 className="d-flex flex-column align-items-center justify-content-center btn btn-outline-primary p-4 me-4 w-100 fs-1 mb-5"
                                 htmlFor="btn_phone" style={{height:"350px"}} data-bs-toggle="modal"
                                 data-bs-target="#picture_phone"><i
-                                className="bi bi-camera fs-0_5 mb-4"></i>폰으로 사진 전송</label>
+                                className="bi bi-camera fs-0_5 mb-4"
+                                ></i>폰으로 사진 전송</label>
 
                             <input type="radio" className="btn-check me-4" name="options-outlined" id="btn_paper"
                                    autoComplete="off"/>
@@ -55,6 +64,11 @@ function ChooseSendType(){
                                     서류요청</label>
                     </div>
                 </div>
+                {sendTypeModalOpen && (
+                    <ModalPortal>
+                        <SendTypeModal onClose={HandleSendTypeModalShow} isOpen={true}/>
+                    </ModalPortal>
+                )}
                 <div className="footer-fix">
                     <div className="d-flex container">
                         {/* eslint-disable-next-line no-restricted-globals */}
