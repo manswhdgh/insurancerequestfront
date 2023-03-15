@@ -73,6 +73,16 @@ input::-webkit-input-placeholder {
 input:-ms-input-placeholder {
     font-size: 1.8em;
 }
+.write-input::-webkit-input-placeholder {
+    font-size: 40px;
+}
+
+.write-input:-ms-input-placeholder {
+    font-size: 40px;
+}
+.write-input{
+    font-size: 40px !important;
+}
 
 .py-6{
     padding-top: 4rem !important;

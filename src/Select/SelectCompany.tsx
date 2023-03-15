@@ -49,7 +49,7 @@ function SelectCompany(){
         <Layout>
             <main className="container main_pd text-center">
                 <div className="fs-0_5 fw-bold">보험금 청구</div>
-                <div className="fs-4 mb-5"><span className="fw-bold fs-3 text-pink">보험사선택</span> - 청구서작성 - 병원서류첨부 - 전송
+                <div className="fs-4 mb-5"><span className="fw-bold fs-3 text-pink">보험사선택</span> - 청구서작성 - 병원서류첨부 - 청구내용확인
                 </div>
 
                 <div className="py-5">
@@ -167,13 +167,7 @@ function SelectCompany(){
                             </span>
                         </label>
 
-                        <label className="col-4 px-1 mb-3">
-                            <input className="d-none" value="신협공제" virtualfaxyn="No" name="company_check_box" type="checkbox"/>
-                            <span className="btn border border-5 check-btn rounded-3 p-4">
-                                <img src="/image/company/신협공제.svg" className="d-block w-100" alt="..."/>
-                                <div className="fs-4 mt-2">신협공제</div>
-                            </span>
-                        </label>
+                        
 
                         <label className="col-3 px-1">
 

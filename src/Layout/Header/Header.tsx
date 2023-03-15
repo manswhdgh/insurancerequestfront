@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import useInterval from "../../components/util/useInterval";
 
 function Header() {
+    const navigate = useNavigate();
+    const homeBtn = () => {
+        navigate("/");
+    }
+
+    //onClick={() => homeBtn()}
     let timeElement = document.getElementById("timeto") as HTMLDivElement;
     const refreshTime = () => {
         let presentTime = new Date();
@@ -24,8 +31,8 @@ function Header() {
         <header className="w-100 border-bottom p-2">
             <div className="d-flex justify-content-between align-items-center container text-secondary">
                 <div><img src="/image/logo/bocare_white.svg" className="d-block w-75" alt="..."/></div>
-                <div>실손보험 빠른청구 서비스</div>
                 <div id="timeto">2023-02-16(목) 14:24</div>
+                <div>문용성 관리자 <button className="btn btn-outline-primary rounded-circle" onClick={() => homeBtn()}>홈</button></div>
             </div>
         </header>
     );
