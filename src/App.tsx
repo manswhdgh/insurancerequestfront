@@ -10,6 +10,7 @@ import ChooseBeneficiary from "./Write/ChooseBeneficiary";
 import ChooseSendType from "./Transmit/ChooseSendType";
 import Complete from "./Complete/Complete";
 import Introduce from "./Introduce/Introduce";
+import Final from './Complete/Final';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path='/chooseBeneficiary' element={<ChooseBeneficiary/>}/>
             <Route path='/chooseSendType' element={<ChooseSendType/>}/>
             <Route path='/complete' element={<Complete/>}/>
+            <Route path='/final' element={<Final/>}/>
             {/*<Route path='/chooseBeneficiary' element={<ChooseBeneficiary/>}/>*/}
         </Routes>
       </BrowserRouter>
