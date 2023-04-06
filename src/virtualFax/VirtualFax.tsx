@@ -1,8 +1,8 @@
-import {AriaAttributes, DOMAttributes, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import InsCard from "./Card/InsCard";
 import {useLocation, useNavigate} from "react-router-dom";
 import Layout from "../Layout/Layout";
-import '../components/css/common.css';
+import '../components/css/kiosk_common.css';
 import 'globalthis/auto';
 
 function VirtualFax(){
@@ -46,7 +46,11 @@ function VirtualFax(){
             });
 
             if(passthru){
-                navigate("/choose");
+                navigate("/choose", {
+                    state: {
+                        selectInfo: selectedCompany
+                    }
+                });
             }
         }
     }, [selectedCompany]);

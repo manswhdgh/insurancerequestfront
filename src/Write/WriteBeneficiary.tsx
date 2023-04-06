@@ -66,25 +66,25 @@ function WriteBeneficiary(){
                     <div className="fs-2 fw-bold text-start mb-2"><i className="bi bi-check2-circle me-2"></i>수익자
                         정보를 입력하세요.
                     </div>
-                    <input id="beneficiary_name" name="beneficiary_name" className="form-control py-6 mb-4 write-input" type="text"
+                    <input id="beneficiary_name" name="beneficiary_name" className="form-control py-6 mb-4 kiosk-input write-input" type="text"
                            placeholder="수익자 성함을 입력해주세요."
                     />
                     <div className="d-flex align-items-center mb-4">
-                        <input id="beneficiary_number_front" name="beneficiary_number_front" className="form-control py-6 write-input" type="tel" placeholder="주민등록번호 앞(6자리)"
+                        <input id="beneficiary_number_front" name="beneficiary_number_front" className="form-control py-6 kiosk-input write-input" type="tel" placeholder="주민등록번호 앞(6자리)"
                         />
                         <div className="mx-4">-</div>
-                        <input id="beneficiary_number_back" name="beneficiary_number_back" className="form-control py-6 write-input" type="tel"
+                        <input id="beneficiary_number_back" name="beneficiary_number_back" className="form-control py-6 kiosk-input write-input" type="tel"
                                placeholder="주민등록번호 뒤(7자리)"
                         />
                     </div>
                     <div className="d-flex align-items-center">
-                        <input id="beneficiary_phone_first" name="beneficiary_phone_first" className="form-control py-6 write-input" type="tel" placeholder="010"
+                        <input id="beneficiary_phone_first" name="beneficiary_phone_first" className="form-control py-6 kiosk-input write-input" type="tel" placeholder="010"
                         />
                         <div className="mx-4">-</div>
-                        <input id="beneficiary_phone_second" name="beneficiary_phone_second" className="form-control py-6 write-input" type="tel" placeholder="0000"
+                        <input id="beneficiary_phone_second" name="beneficiary_phone_second" className="form-control py-6 kiosk-input write-input" type="tel" placeholder="0000"
                         />
                         <div className="mx-4">-</div>
-                        <input id="beneficiary_phone_third" name="beneficiary_phone_third" className="form-control py-6 write-input" type="tel" placeholder="0000"
+                        <input id="beneficiary_phone_third" name="beneficiary_phone_third" className="form-control py-6 kiosk-input write-input" type="tel" placeholder="0000"
                         />
                     </div>
                 </div>

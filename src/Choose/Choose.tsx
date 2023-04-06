@@ -1,7 +1,7 @@
 import Layout from "../Layout/Layout";
 import {useLocation, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
-import '../components/css/common.css';
+import '../components/css/kiosk_common.css';
 import 'globalthis/auto';
 
 function Choose(){

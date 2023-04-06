@@ -1,4 +1,4 @@
-import '../../components/css/common.css';
+import '../../components/css/kiosk_common.css';
 import ModalPortal from "../../Layout/Modal/ModalPortal";
 import Modal from 'react-bootstrap/Modal';
 

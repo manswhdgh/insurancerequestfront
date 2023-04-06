@@ -58,7 +58,7 @@ a:hover {
     color: #ff4081;
 }
 
-input[type="checkbox"] {
+.kiosk-input input[type="checkbox"] {
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -66,11 +66,11 @@ input[type="checkbox"] {
     appearance: none;
 }
 
-input::-webkit-input-placeholder {
+.kiosk-input  input::-webkit-input-placeholder {
     font-size: 1.8em;
 }
 
-input:-ms-input-placeholder {
+.kiosk-input  input:-ms-input-placeholder {
     font-size: 1.8em;
 }
 .write-input::-webkit-input-placeholder {

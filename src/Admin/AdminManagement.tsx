@@ -11,13 +11,13 @@ function AdminManagement(){
                         <div className="position-sticky pt-3">
                             <ul className="nav flex-column">
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/kiosk_insurance_admin/">
+                                    <a className="nav-link" aria-current="page" href="/kiosk_insurance_admin/">
                                         <span data-feather="home"></span>
                                         보험금청구
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" aria-current="page"
+                                    <a className="nav-link active" aria-current="page"
                                        href="/kiosk_insurance_admin/management/">
                                         <span data-feather="home"></span>
                                         키오스크 관리
@@ -107,9 +107,9 @@ function AdminManagement(){
                         <hr/>
                         <div className="d-flex pb-5">
                             <div className="ms-auto">
-                                <button type="button" id="downloadAll" className="btn btn-outline-secondary me-1">취소
+                                <button type="button" id="downloadAll" className="btn btn-outline-secondary me-2">취소
                                 </button>
-                                <button type="button" id="downloadAll" className="btn btn-bocare me-1">저장</button>
+                                <button type="button" id="downloadAll" className="btn btn-primary">저장</button>
                             </div>
                         </div>
 

@@ -126,11 +126,11 @@ function AdminInsuranceResultDetail(){
                         <div className="d-flex pb-5">
                             <div className="">
                                 <a href="/kiosk_insurance_admin/index.html"
-                                   className="btn btn-outline-bocare me-1">리스트</a>
+                                   className="btn btn-outline-primary me-1">리스트</a>
 
                             </div>
                             <div className="ms-auto">
-                                <button type="button" id="downloadAll" className="btn btn-outline-bocare me-1">재청구하기
+                                <button type="button" id="downloadAll" className="btn btn-primary me-1">재청구하기
                                 </button>
                             </div>
                         </div>
