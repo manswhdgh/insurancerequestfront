@@ -12,10 +12,12 @@ declare module 'react' {
 
 function SelectCompany(){
     let navigate = useNavigate();
-    const handleNextPage = (infos : any) => {
-        navigate('/choose', {
+    const handleNextPage = (selectedCompany : any) => {
+        console.log(selectedCompany);
+
+        navigate('/virtualfax', {
             state: {
-                infos: infos
+                selectInfo: selectedCompany
             }
         })
     }

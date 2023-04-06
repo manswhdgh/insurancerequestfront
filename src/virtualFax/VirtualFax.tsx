@@ -13,27 +13,27 @@ function VirtualFax(){
     const nextPage = () => {
         let faxNumElements = document.getElementsByName("virtualFaxNumber") as NodeListOf<HTMLInputElement>;
 
-        // faxNumElements.forEach((element: any) => {
-        //     if(element.value === "" && element.classList.contains("d-flex")){
-        //         alert("가상팩스번호를 입력해주세요.");
-        //         element.focus();
-        //         return;
-        //     }
-        // });
-        //
-        // for(let i=0; i<selectedCompany.length; i++){
-        //     selectedCompany[i]['virtualfax'] = faxNumElements[i].value;
-        // }
+        faxNumElements.forEach((element: any) => {
+            if(element.value === "" && element.classList.contains("d-flex")){
+                alert("가상팩스번호를 입력해주세요.");
+                element.focus();
+                return;
+            }
+        });
+
+        for(let i=0; i<selectedCompany.length; i++){
+            selectedCompany[i]['faxnumber'] = faxNumElements[i].value;
+        }
 
         navigate("/choose", {
-            // state: {
-            //     infos: selectedCompany
-            // }
+            state: {
+                selectInfo: selectedCompany
+            }
         });
     }
 
     useEffect(()=>{
-        setSelectedCompany(loc.state.infos);
+        setSelectedCompany(loc.state.selectInfo);
 
         let passthru = true;
 
@@ -49,7 +49,7 @@ function VirtualFax(){
                 navigate("/choose");
             }
         }
-    }, [loc]);
+    }, [selectedCompany]);
 
     return(
         <Layout>

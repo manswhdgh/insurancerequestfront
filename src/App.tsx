@@ -11,6 +11,10 @@ import ChooseSendType from "./Transmit/ChooseSendType";
 import Complete from "./Complete/Complete";
 import Introduce from "./Introduce/Introduce";
 import Final from './Complete/Final';
+import WriteBeneficiary from "./Write/WriteBeneficiary";
+import AdminMain from "./Admin/AdminMain";
+import AdminManagement from "./Admin/AdminManagement";
+import AdminInsuranceResultDetail from "./Admin/Detail/AdminInsuranceResultDetail";
 
 function App() {
   return (
@@ -27,6 +31,12 @@ function App() {
             <Route path='/chooseSendType' element={<ChooseSendType/>}/>
             <Route path='/complete' element={<Complete/>}/>
             <Route path='/final' element={<Final/>}/>
+            <Route path='/writeBeneficiary' element={<WriteBeneficiary />} />
+
+            {/* 관리자페이지 라우팅*/}
+            <Route path='/admin' element={<AdminMain />} />
+            <Route path='/admin/management' element={<AdminManagement />} />
+            <Route path='/admin/insuranceDetail/' element={<AdminInsuranceResultDetail />} />
             {/*<Route path='/chooseBeneficiary' element={<ChooseBeneficiary/>}/>*/}
         </Routes>
       </BrowserRouter>

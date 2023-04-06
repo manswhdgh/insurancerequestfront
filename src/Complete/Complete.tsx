@@ -1,6 +1,7 @@
 import {useLocation, useNavigate} from "react-router-dom";
 import Layout from "../Layout/Layout";
 import {useEffect, useState} from "react";
+import axios from "axios";
 
 function Complete(){
     let navigate = useNavigate();
@@ -9,7 +10,20 @@ function Complete(){
     const [insurerInfo, setInsurerInfo]:any = useState();
 
     const nextPage = () =>{
-        navigate("/final");
+        let formData = new FormData();
+        formData.append("selectInfo", loc.state.selectInfo);
+        formData.append("accidentType", loc.state.accidentType);
+        formData.append("insurerInfo", loc.state.insurerInfo);
+        formData.append("beneficiaryExist", loc.state.beneficiaryExist);
+        formData.append("beneficiaryInfo", loc.state.beneficiaryInfo);
+
+        axios.post("", formData).then((res)=>{
+            console.log(res);
+            navigate("/final");
+        }).catch((err)=>{
+            console.log(err);
+            alert("");
+        });
     }
 
     useEffect(()=>{

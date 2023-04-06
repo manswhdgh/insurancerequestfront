@@ -22,18 +22,17 @@ function ChooseSendType(){
     const nextPage = () => {
         navigate("/complete",{
             state: {
-                infos: selectedCompany,
-                insurerInfo: insurerInfo
+                selectInfo: loc.state.selectInfo,
+                accidentType: loc.state.accidentType,
+                insurerInfo: loc.state.insurerInfo,
+                beneficiaryExist: loc.state.beneficiaryExist,
+                beneficiaryInfo: loc.state.beneficiaryInfo
             }
         })
     }
 
     useEffect(()=>{
-        setSelectedCompany(loc.state.infos);
-        setInsurerInfo(loc.state.insurerInfo);
-
-        console.log(loc.state.infos);
-        console.log(loc.state.insurerInfo);
+        console.log(loc.state);
     }, [loc]);
 
     return (

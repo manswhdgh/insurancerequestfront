@@ -8,31 +8,36 @@ function ChooseBeneficiary(){
     let navigate = useNavigate();
     let loc = useLocation();
 
-    const [selectedCompany, setSelectedCompany]:any = useState();
-    const [insurerInfo, setInsurerInfo]:any = useState();
+    const [beneficiaryExist, setBeneficiaryExist] = useState("No");
 
     const nextPage = () => {
-        navigate("/chooseSendType", {
+        let navigateUrl = "/chooseSendType";
+
+        if(beneficiaryExist === "Yes"){
+            navigateUrl = "/writeBeneficiary";
+        }
+
+        navigate(navigateUrl, {
             state: {
-                infos: selectedCompany,
-                insurerInfo: insurerInfo
+                selectInfo: loc.state.selectInfo,
+                accidentType: loc.state.accidentType,
+                insurerInfo: loc.state.insurerInfo,
+                beneficiaryExist: beneficiaryExist,
+                beneficiaryInfo: "None"
             }
         });
     }
 
     useEffect(()=>{
-        setSelectedCompany(loc.state.infos);
-        setInsurerInfo(loc.state.insurerInfo);
+        console.log(loc.state);
 
-        console.log(loc.state.infos);
-        console.log(loc.state.insurerInfo);
     }, [loc]);
 
     return(
         <Layout>
             <main className="container main_pd text-center">
                 <div className="fs-0_5 fw-bold">보험금 청구</div>
-                <div className="fs-4 mb-5">보험사선택 - <span className="fw-bold fs-3 text-pink">청구서작성(3/3)</span> - 병원서류첨부 -
+                <div className="fs-4 mb-5">보험사선택 - <span className="fw-bold fs-3 text-pink">청구서작성(3/4)</span> - 병원서류첨부 -
                     청구내용확인
                 </div>
                 <div className="py-5">
@@ -40,16 +45,16 @@ function ChooseBeneficiary(){
                         여부를 체크하세요.
                     </div>
                     <div className="mb-3">
-                        <input type="radio" className="btn-check me-4" name="options-outlined" id="btn01"
-                               autoComplete="off"/>
+                        <input type="radio" className="btn-check me-4" name="beneficiary_exist" id="btn01"
+                               autoComplete="off" value="No" onClick={() => setBeneficiaryExist("No")}/>
                             <label
                                 className="d-flex flex-column align-items-center justify-content-center btn btn-outline-primary p-4 me-4 w-100 fs-1 mb-5"
                                 htmlFor="btn01" style={{height:"350px"}}><i className="bi bi-circle fs-0_5 mb-4"></i>피보험자(진료
                                 받은 분)와<br/>수익자가
                                     동일</label>
 
-                            <input type="radio" className="btn-check me-4" name="options-outlined" id="btn02"
-                                   autoComplete="off"/>
+                            <input type="radio" className="btn-check me-4" name="beneficiary_exist" id="btn02"
+                                   autoComplete="off" value="Yes" onClick={() => setBeneficiaryExist("Yes")}/>
                                 <label
                                     className="d-flex flex-column align-items-center justify-content-center btn btn-outline-primary p-4 w-100 fs-1"
                                     htmlFor="btn02" style={{height:"350px"}}><i className="bi bi-x-circle fs-0_5 mb-4"></i>피보험자(진료받은분)와<br/>수익자가

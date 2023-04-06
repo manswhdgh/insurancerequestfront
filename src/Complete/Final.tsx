@@ -1,6 +1,13 @@
 import Layout from "../Layout/Layout";
+import {useNavigate} from "react-router-dom";
 
 function Final(){
+    const navigate = useNavigate();
+
+    const homePage = () => {
+        navigate("/");
+    }
+
     return(
         <Layout>
             <main className="container main_pd text-center">
@@ -15,7 +22,7 @@ function Final(){
                 
                <div className="footer-fix">
                     <div className="d-flex container">
-                        <button type="button" className="btn btn-secondary my-4 p-5 py-6 fs-3 w-100">처음으로
+                        <button type="button" className="btn btn-secondary my-4 p-5 py-6 fs-3 w-100" onClick={() => homePage()}>처음으로
                         </button>
             
                     </div>

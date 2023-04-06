@@ -6,13 +6,12 @@ import 'globalthis/auto';
 function Write(){
     let navigate = useNavigate();
     let loc = useLocation();
-    const [selectedCompany, setSelectedCompany]:any = useState();
-    const [insurerInfo, setInsurerInfo]:any = useState();
 
-    const handleNextPage = (selectedCompany : any, insurerInfo : any) => {
+    const handleNextPage = (insurerInfo : Object) => {
         navigate("/chooseBeneficiary", {
             state: {
-                infos: selectedCompany,
+                selectInfo: loc.state.selectInfo,
+                accidentType: loc.state.accidentType,
                 insurerInfo: insurerInfo
             }
         });
@@ -26,42 +25,42 @@ function Write(){
         let insurerPhoneSecond = document.getElementById("insurer_phone_second") as HTMLInputElement;
         let insurerPhoneThird = document.getElementById("insurer_phone_third") as HTMLInputElement;
 
-        // if(insurerName.value === ""){
-        //     alert("피보험자 성함을 입력해주세요.");
-        //     insurerName.focus();
-        //     return;
-        // }
-        //
-        // if(insurerNumberFront.value === "" || insurerNumberBack.value === ""){
-        //     alert("피보험자 주민등록번호를 입력해주세요.");
-        //     insurerNumberFront.focus();
-        //     return;
-        // }
-        //
-        // if(insurerPhoneFirst.value === "" || insurerPhoneSecond.value === "" || insurerPhoneThird.value === ""){
-        //     alert("피보험자 연락처를 입력해주세요.");
-        //     insurerPhoneFirst.focus();
-        //     return;
-        // }
+        if(insurerName.value === ""){
+            alert("피보험자 성함을 입력해주세요.");
+            insurerName.focus();
+            return;
+        }
 
-        setInsurerInfo({
+        if(insurerNumberFront.value === "" || insurerNumberBack.value === ""){
+            alert("피보험자 주민등록번호를 입력해주세요.");
+            insurerNumberFront.focus();
+            return;
+        }
+
+        if(insurerPhoneFirst.value === "" || insurerPhoneSecond.value === "" || insurerPhoneThird.value === ""){
+            alert("피보험자 연락처를 입력해주세요.");
+            insurerPhoneFirst.focus();
+            return;
+        }
+
+        let insurerInfo = {
             insurerName: insurerName.value,
             insurerNumber: insurerNumberFront.value + "-" + insurerNumberBack.value,
             insurerPhone: insurerPhoneFirst.value + "-" + insurerPhoneSecond.value + "-" + insurerPhoneThird.value
-        })
+        };
 
-        handleNextPage(selectedCompany, insurerInfo);
+        handleNextPage(insurerInfo);
     }
 
-    useEffect(()=>{
-        setSelectedCompany(loc.state.infos);
+    useEffect(() => {
+        console.log(loc.state)
     }, [loc]);
 
     return(
         <Layout>
             <main className="container main_pd text-center">
                 <div className="fs-0_5 fw-bold">보험금 청구</div>
-                <div className="fs-4 mb-5">보험사선택 - <span className="fw-bold fs-3 text-pink">청구서작성(2/3)</span> - 병원서류첨부 -
+                <div className="fs-4 mb-5">보험사선택 - <span className="fw-bold fs-3 text-pink">청구서작성(2/4)</span> - 병원서류첨부 -
                     청구내용확인
                 </div>
                 <div className="py-5">
