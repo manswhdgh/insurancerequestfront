@@ -105,3 +105,11 @@ body {
     width: 200px;
     height: 40px;
 }
+.search-box-size {
+    width: 400px;
+    height: 40px;
+}
+.sidebar .nav-link.active {
+    background-color: #ff4081 ;
+    color: #fff !important;
+}

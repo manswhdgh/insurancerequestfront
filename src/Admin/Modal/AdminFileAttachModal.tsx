@@ -1,4 +1,3 @@
-import '../../components/css/common.css';
 import ModalPortal from "../../Layout/Modal/ModalPortal";
 import Modal from 'react-bootstrap/Modal';
 import '../../components/css/admin_dashboard.css';
@@ -8,8 +7,7 @@ const AdminFileAttachModal = ({onClose, isOpen}: any) => {
     return (
         <ModalPortal>
             <Modal show={isOpen} size="xl">
-                <div className="modal-dialog modal-xl">
-                    <div className="modal-content">
+            
                         <div className="modal-header">
                             <h5 className="modal-title" id="exampleModalLabel">청구서류 첨부</h5>
                             <button type="button" className="btn-close" onClick={onClose}
@@ -157,8 +155,6 @@ const AdminFileAttachModal = ({onClose, isOpen}: any) => {
                             </button>
                             <button type="button" className="btn btn-primary">첨부하기</button>
                         </div>
-                    </div>
-                </div>
             </Modal>
         </ModalPortal>
     );

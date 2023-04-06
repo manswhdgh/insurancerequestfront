@@ -15,11 +15,13 @@ import WriteBeneficiary from "./Write/WriteBeneficiary";
 import AdminMain from "./Admin/AdminMain";
 import AdminManagement from "./Admin/AdminManagement";
 import AdminInsuranceResultDetail from "./Admin/Detail/AdminInsuranceResultDetail";
+import Login from './Login/Login';
 
 function App() {
   return (
       <BrowserRouter>
         <Routes>
+            <Route path='/login' element={<Login />} />
             <Route path='/' element={<Introduce />} />
             <Route path='/insuranceMain' element={<InsuranceMain />} />
             <Route path='/agree' element={<Agree />} />

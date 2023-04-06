@@ -1,6 +1,6 @@
 import ModalPortal from "../../Layout/Modal/ModalPortal";
 import {Modal} from "react-bootstrap";
-import '../../components/css/common.css';
+import '../../components/css/kiosk_common.css';
 
 function SendTypeModal({ onClose, isOpen }: any){
     return (
@@ -20,14 +20,14 @@ function SendTypeModal({ onClose, isOpen }: any){
                                 확인해주세요.
                             </div>
                             <div className="d-flex align-items-center">
-                                <input type="tel" className="form-control py-6" name="phone_input write-input" id="phone_num_first"
+                                <input style={{fontSize:"2.6rem"}} type="tel" className="form-control py-6" name="phone_input kiosk-input write-input " id="phone_num_first"
                                        maxLength={3} placeholder="010"/>
                                     <div className="px-2">-</div>
-                                    <input type="tel" className="form-control py-6" name="phone_input write-input"
+                                    <input style={{fontSize:"2.6rem"}} type="tel" className="form-control py-6" name="phone_input kiosk-input write-input"
                                            id="phone_num_second"
                                            maxLength={4} placeholder="1234"/>
                                         <div className="px-2">-</div>
-                                        <input type="tel" className="form-control py-6" name="phone_input write-input"
+                                        <input style={{fontSize:"2.6rem"}} type="tel" className="form-control py-6" name="phone_input kiosk-input write-input"
                                                id="phone_num_third"
                                                maxLength={4} placeholder="5678"/>
                             </div>

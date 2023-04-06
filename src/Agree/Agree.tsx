@@ -1,5 +1,5 @@
 import Layout from "../Layout/Layout";
-import '../components/css/common.css';
+import '../components/css/kiosk_common.css';
 import {useState} from "react";
 import ModalPortal from "../Layout/Modal/ModalPortal";
 import CreditInsModal from "./Modal/CreditInsModal";

@@ -1,4 +1,4 @@
-import '../components/css/common.css';
+import '../components/css/kiosk_common.css';
 import Layout from "../Layout/Layout";
 import 'globalthis/auto';
 

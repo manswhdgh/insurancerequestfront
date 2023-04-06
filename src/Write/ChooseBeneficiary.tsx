@@ -1,6 +1,6 @@
 import Layout from "../Layout/Layout";
 import 'globalthis/auto';
-import '../components/css/common.css';
+import '../components/css/kiosk_common.css';
 import {useLocation, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 

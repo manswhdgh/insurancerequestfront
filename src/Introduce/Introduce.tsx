@@ -1,4 +1,4 @@
-import '../components/css/common.css';
+import '../components/css/kiosk_common.css';
 import Layout from "../Layout/Layout";
 import {useNavigate} from "react-router-dom";
 import { useEffect } from 'react';

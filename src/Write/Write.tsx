@@ -1,7 +1,7 @@
 import Layout from "../Layout/Layout";
 import {useLocation, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
-import '../components/css/common.css';
+import '../components/css/kiosk_common.css';
 import 'globalthis/auto';
 function Write(){
     let navigate = useNavigate();
@@ -67,25 +67,25 @@ function Write(){
                     <div className="fs-2 fw-bold text-start mb-2"><i className="bi bi-check2-circle me-2"></i>피보험자(진료받으신)
                         정보를 입력하세요.
                     </div>
-                    <input id="insurer_name" name="insurer_name" className="form-control py-6 mb-4 write-input" type="text"
+                    <input id="insurer_name" name="insurer_name" className="form-control py-6 mb-4 kiosk-input write-input" type="text"
                            placeholder="진료 받으신분(피보험자) 성함을 입력해주세요."
                            />
                         <div className="d-flex align-items-center mb-4">
-                            <input id="insurer_number_front" name="insurer_number_front" className="form-control py-6 write-input" type="tel" placeholder="주민등록번호 앞(6자리)"
+                            <input id="insurer_number_front" name="insurer_number_front" className="form-control py-6 kiosk-input write-input" type="tel" placeholder="주민등록번호 앞(6자리)"
                                    />
                                 <div className="mx-4">-</div>
-                                <input id="insurer_number_back" name="insurer_number_back" className="form-control py-6 write-input" type="tel"
+                                <input id="insurer_number_back" name="insurer_number_back" className="form-control py-6 kiosk-input write-input" type="tel"
                                        placeholder="주민등록번호 뒤(7자리)"
                                        />
                         </div>
                         <div className="d-flex align-items-center">
-                            <input id="insurer_phone_first" name="insurer_phone_first" className="form-control py-6 write-input" type="tel" placeholder="010"
+                            <input id="insurer_phone_first" name="insurer_phone_first" className="form-control py-6 kiosk-input write-input" type="tel" placeholder="010"
                                    />
                                 <div className="mx-4">-</div>
-                                <input id="insurer_phone_second" name="insurer_phone_second" className="form-control py-6 write-input" type="tel" placeholder="0000"
+                                <input id="insurer_phone_second" name="insurer_phone_second" className="form-control py-6 kiosk-input write-input" type="tel" placeholder="0000"
                                        />
                                     <div className="mx-4">-</div>
-                                    <input id="insurer_phone_third" name="insurer_phone_third" className="form-control py-6 write-input" type="tel" placeholder="0000"
+                                    <input id="insurer_phone_third" name="insurer_phone_third" className="form-control py-6 kiosk-input write-input" type="tel" placeholder="0000"
                                            />
                         </div>
                 </div>
