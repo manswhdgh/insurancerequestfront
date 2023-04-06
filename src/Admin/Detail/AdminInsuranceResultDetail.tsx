@@ -1,6 +1,6 @@
 import AdminLayout from "../../Layout/AdminLayout";
-import '../components/css/admin_dashboard.css';
-import '../components/css/admin_dashboard_rtl.css';
+import '../../components/css/admin_dashboard.css';
+import '../../components/css/admin_dashboard_rtl.css';
 
 function AdminInsuranceResultDetail(){
     return(

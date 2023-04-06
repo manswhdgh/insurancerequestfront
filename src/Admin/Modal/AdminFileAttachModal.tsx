@@ -1,8 +1,8 @@
 import '../../components/css/common.css';
 import ModalPortal from "../../Layout/Modal/ModalPortal";
 import Modal from 'react-bootstrap/Modal';
-import '../components/css/admin_dashboard.css';
-import '../components/css/admin_dashboard_rtl.css';
+import '../../components/css/admin_dashboard.css';
+import '../../components/css/admin_dashboard_rtl.css';
 
 const AdminFileAttachModal = ({onClose, isOpen}: any) => {
     return (
