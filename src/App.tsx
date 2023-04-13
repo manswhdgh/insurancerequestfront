@@ -17,6 +17,7 @@ import AdminManagement from "./Admin/AdminManagement";
 import AdminInsuranceResultDetail from "./Admin/Detail/AdminInsuranceResultDetail";
 import Login from './Login/Login';
 import Logout from "./Login/Logout";
+import WriteBankInfo from './Write/WriteBankInfo';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Route path='/complete' element={<Complete/>}/>
             <Route path='/final' element={<Final/>}/>
             <Route path='/writeBeneficiary' element={<WriteBeneficiary />} />
+            <Route path='/writeBankInfo' element={<WriteBankInfo/>} />
 
             {/* 관리자페이지 라우팅*/}
             <Route path='/admin' element={<AdminMain />} />
