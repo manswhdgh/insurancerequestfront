@@ -60,7 +60,7 @@ function WriteBeneficiary(){
         <Layout>
             <main className="container main_pd text-center">
                 <div className="fs-0_5 fw-bold">보험금 청구</div>
-                <div className="fs-4 mb-5">보험사선택 - <span className="fw-bold fs-3 text-pink">청구서작성(4/4)</span> - 병원서류첨부 -
+                <div className="fs-4 mb-5">보험사선택 - <span className="fw-bold fs-3 text-pink">청구서작성(4/5)</span> - 병원서류첨부 -
                     청구내용확인
                 </div>
                 <div className="py-5">
