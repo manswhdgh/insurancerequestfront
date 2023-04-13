@@ -44,12 +44,13 @@ function WriteBeneficiary(){
             alert("수익자 연락처를 입력해주세요.");
             beneficiaryPhoneFirst.focus();
             return;
+
         }
 
         setBeneficiaryInfo({
-            insurerName: beneficiaryName.value,
-            insurerNumber: beneficiaryNumberFront.value + "-" + beneficiaryNumberBack.value,
-            insurerPhone: beneficiaryPhoneFirst.value + "-" + beneficiaryPhoneSecond.value + "-" + beneficiaryPhoneThird.value
+            beneficiaryName: beneficiaryName.value,
+            beneficiaryNumber: beneficiaryNumberFront.value + "-" + beneficiaryNumberBack.value,
+            beneficiaryPhone: beneficiaryPhoneFirst.value + "-" + beneficiaryPhoneSecond.value + "-" + beneficiaryPhoneThird.value
         })
 
         handleNextPage();

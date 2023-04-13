@@ -7,15 +7,20 @@ import 'globalthis/auto';
 function Choose(){
     let navigate = useNavigate();
     let loc = useLocation();
+    const [selectedCompany, setSelectedCompany]: any = useState();
 
     const nextPage = () => {
         navigate("/write" , {
             state: {
-                selectInfo: loc.state.selectInfo,
+                selectInfo: selectedCompany,
                 accidentType: document.querySelector<HTMLInputElement>("input[name='accidentType']:checked")?.value
             }
         });
     }
+
+    useEffect(() => {
+        setSelectedCompany(loc.state.selectInfo);
+    }, [selectedCompany]);
 
     return(
         <Layout>
@@ -52,7 +57,7 @@ function Choose(){
                 <div className="footer-fix">
                     <div className="d-flex container">
                         {/* eslint-disable-next-line no-restricted-globals */}
-                        <button type="button" className="btn btn-secondary my-4 px-5 py-6 fs-3 w-100 me-4" onClick={() => history.back()}><i
+                        <button type="button" className="btn btn-secondary my-4 px-5 py-6 fs-3 w-100 me-4" onClick={() => window.location.href = `${location.origin}/select`}><i
                             className="bi bi-arrow-left-square me-2"></i>아니오 [뒤로가기]
                         </button>
                         <button type="button" className="btn btn-pink my-4 px-5 py-6 fs-3 w-100 ms-4" onClick={() => nextPage()}><i

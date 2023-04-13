@@ -16,12 +16,14 @@ import AdminMain from "./Admin/AdminMain";
 import AdminManagement from "./Admin/AdminManagement";
 import AdminInsuranceResultDetail from "./Admin/Detail/AdminInsuranceResultDetail";
 import Login from './Login/Login';
+import Logout from "./Login/Logout";
 
 function App() {
   return (
       <BrowserRouter>
         <Routes>
             <Route path='/login' element={<Login />} />
+            <Route path='/logout' element={<Logout />} />
             <Route path='/' element={<Introduce />} />
             <Route path='/insuranceMain' element={<InsuranceMain />} />
             <Route path='/agree' element={<Agree />} />

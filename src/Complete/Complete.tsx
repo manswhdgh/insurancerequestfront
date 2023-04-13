@@ -10,12 +10,22 @@ function Complete(){
     const [insurerInfo, setInsurerInfo]:any = useState();
 
     const nextPage = () =>{
+        if(loc.state.beneficiaryExist === "No"){
+            loc.state.beneficiaryExist.beneficiaryName = "";
+            loc.state.beneficiaryExist.beneficiaryNumber = "";
+            loc.state.beneficiaryExist.beneficiaryPhone = "";
+        }
+
+        let info = {...loc.state.insurerInfo, ...loc.state.beneficiaryInfo, ...loc.state.accidentType};
+
+        console.log(info);
+        console.log(loc.state.selectInfo);
+        console.log(loc.state.beneficiaryExist);
+
         let formData = new FormData();
         formData.append("selectInfo", loc.state.selectInfo);
-        formData.append("accidentType", loc.state.accidentType);
-        formData.append("insurerInfo", loc.state.insurerInfo);
+        formData.append("info", info);
         formData.append("beneficiaryExist", loc.state.beneficiaryExist);
-        formData.append("beneficiaryInfo", loc.state.beneficiaryInfo);
 
         axios.post("", formData).then((res)=>{
             console.log(res);

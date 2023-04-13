@@ -53,7 +53,7 @@ function Agree(){
                     </div>
                     <div className="border border-primary border-5 rounded-3 p-3 py-5 mb-3 w-100">
                         <div className="d-flex form-check">
-                            <input className="form-check-input mt-2" type="checkbox" id="checkAll" onClick={() => CheckAll()}/>
+                            <input className="form-check-input mt-2 ms-2" type="checkbox" id="checkAll" style={{fontSize:"3rem"}} onClick={() => CheckAll()}/>
                                 <label className="form-check-label text-start mt-1 ms-4 fs-1 fw-bold w-100" htmlFor="checkAll">
                                     전체동의
                                 </label>
@@ -63,7 +63,7 @@ function Agree(){
                     <div className="border border-5 rounded-3 p-3 py-5 mb-3 w-100">
                         <div className="d-flex align-items-center form-check">
                             <div>
-                                <input className="form-check-input" type="checkbox" value="" id="checkCreditIns" name="checkAgree"/>
+                                <input className="form-check-input ms-2" type="checkbox" value="" id="checkCreditIns" name="checkAgree" style={{fontSize:"2.5rem"}}/>
                                     <label className="form-check-label text-start mt-1 ms-4 fs-2" htmlFor="Check01"
                                            style={{textDecoration:"underline"}}>
                                         보험금 청구를 위한 개인(신용) 정보 처리 동의(필수 동의)
@@ -84,7 +84,7 @@ function Agree(){
                     <div className="border border-5 rounded-3 p-3 py-5 mb-3 w-100">
                         <div className="d-flex align-items-center form-check">
                             <div>
-                                <input className="form-check-input" type="checkbox" value="" id="checkCreditDev" name="checkAgree"/>
+                                <input className="form-check-input ms-2" type="checkbox" value="" id="checkCreditDev" name="checkAgree" style={{fontSize:"2.5rem"}}/>
                                     <label className="form-check-label text-start mt-1 ms-4 fs-2" htmlFor="Check02"
                                            style={{textDecoration:"underline"}}>
                                         청구 대행 서비스 제공을 위한 개인정보 처리 동의(필수 동의)
@@ -105,7 +105,7 @@ function Agree(){
                     <div className="border border-5 rounded-3 p-3 py-5 mb-3 w-100">
                         <div className="d-flex align-items-center form-check">
                             <div>
-                                <input className="form-check-input" type="checkbox" value="" id="checkCreditLog" name="checkAgree"/>
+                                <input className="form-check-input ms-2" type="checkbox" value="" id="checkCreditLog" name="checkAgree" style={{fontSize:"2.5rem"}}/>
                                     <label className="form-check-label text-start mt-1 ms-4 fs-2" htmlFor="Check03"
                                            style={{textDecoration:"underline"}}>
                                         안내, 청구 이력 등의 관리를 위한 제3자 정보 제공(선택 동의)

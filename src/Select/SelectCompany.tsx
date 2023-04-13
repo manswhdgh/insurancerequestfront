@@ -1,7 +1,6 @@
 import '../components/css/kiosk_common.css';
 import Layout from "../Layout/Layout";
-import {useEffect, useState} from "react";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import 'globalthis/auto';
 
 declare module 'react' {
@@ -15,11 +14,22 @@ function SelectCompany(){
     const handleNextPage = (selectedCompany : any) => {
         console.log(selectedCompany);
 
-        navigate('/virtualfax', {
-            state: {
-                selectInfo: selectedCompany
-            }
-        })
+        let nextPageUrl:string = "/choose";
+
+        if(selectedCompany !== undefined){
+            console.log(selectedCompany);
+            selectedCompany.forEach((info: any) => {
+                if(info.virtualfax === "Yes"){
+                    nextPageUrl = "/virtualfax";
+                }
+            });
+
+            navigate(nextPageUrl, {
+                state: {
+                    selectInfo: selectedCompany
+                }
+            });
+        }
     }
 
     function nextStep(){
@@ -43,9 +53,6 @@ function SelectCompany(){
 
         handleNextPage(selectArr);
     }
-    useEffect(() => {
-
-    }, []);
 
     return(
         <Layout>
